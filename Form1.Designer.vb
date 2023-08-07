@@ -32,11 +32,11 @@ Partial Class Form1
         lblPhoneDirectories = New Label()
         lblCurrentPhoneDirectory = New Label()
         lbCurrentPhoneDirectory = New ListBox()
-        Button1 = New Button()
-        Button2 = New Button()
-        Button3 = New Button()
-        DataGridView1 = New DataGridView()
-        CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
+        btnAddListing = New Button()
+        btnRemoveListing = New Button()
+        btnDisplayListing = New Button()
+        dgvDisplayListing = New DataGridView()
+        CType(dgvDisplayListing, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' lblClickPointer
@@ -126,51 +126,51 @@ Partial Class Form1
         lbCurrentPhoneDirectory.Size = New Size(238, 19)
         lbCurrentPhoneDirectory.TabIndex = 9
         ' 
-        ' Button1
+        ' btnAddListing
         ' 
-        Button1.Location = New Point(44, 265)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(238, 45)
-        Button1.TabIndex = 10
-        Button1.Text = "Add a Listing to the Current Directory"
-        Button1.UseVisualStyleBackColor = True
+        btnAddListing.Location = New Point(44, 265)
+        btnAddListing.Name = "btnAddListing"
+        btnAddListing.Size = New Size(238, 45)
+        btnAddListing.TabIndex = 10
+        btnAddListing.Text = "Add a Listing to the Current Directory"
+        btnAddListing.UseVisualStyleBackColor = True
         ' 
-        ' Button2
+        ' btnRemoveListing
         ' 
-        Button2.Location = New Point(288, 265)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(238, 45)
-        Button2.TabIndex = 11
-        Button2.Text = "Remove a Listing from the Current Directory"
-        Button2.UseVisualStyleBackColor = True
+        btnRemoveListing.Location = New Point(288, 265)
+        btnRemoveListing.Name = "btnRemoveListing"
+        btnRemoveListing.Size = New Size(238, 45)
+        btnRemoveListing.TabIndex = 11
+        btnRemoveListing.Text = "Remove a Listing from the Current Directory"
+        btnRemoveListing.UseVisualStyleBackColor = True
         ' 
-        ' Button3
+        ' btnDisplayListing
         ' 
-        Button3.Location = New Point(532, 265)
-        Button3.Name = "Button3"
-        Button3.Size = New Size(238, 45)
-        Button3.TabIndex = 12
-        Button3.Text = "Display the Listing in the Current Directory"
-        Button3.UseVisualStyleBackColor = True
+        btnDisplayListing.Location = New Point(532, 265)
+        btnDisplayListing.Name = "btnDisplayListing"
+        btnDisplayListing.Size = New Size(238, 45)
+        btnDisplayListing.TabIndex = 12
+        btnDisplayListing.Text = "Display the Listing in the Current Directory"
+        btnDisplayListing.UseVisualStyleBackColor = True
         ' 
-        ' DataGridView1
+        ' dgvDisplayListing
         ' 
-        DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView1.Location = New Point(209, 322)
-        DataGridView1.Name = "DataGridView1"
-        DataGridView1.RowTemplate.Height = 25
-        DataGridView1.Size = New Size(401, 108)
-        DataGridView1.TabIndex = 13
+        dgvDisplayListing.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        dgvDisplayListing.Location = New Point(209, 322)
+        dgvDisplayListing.Name = "dgvDisplayListing"
+        dgvDisplayListing.RowTemplate.Height = 25
+        dgvDisplayListing.Size = New Size(401, 108)
+        dgvDisplayListing.TabIndex = 13
         ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(800, 450)
-        Controls.Add(DataGridView1)
-        Controls.Add(Button3)
-        Controls.Add(Button2)
-        Controls.Add(Button1)
+        Controls.Add(dgvDisplayListing)
+        Controls.Add(btnDisplayListing)
+        Controls.Add(btnRemoveListing)
+        Controls.Add(btnAddListing)
         Controls.Add(lbCurrentPhoneDirectory)
         Controls.Add(lblCurrentPhoneDirectory)
         Controls.Add(lblPhoneDirectories)
@@ -183,7 +183,7 @@ Partial Class Form1
         Controls.Add(lblClickPointer)
         Name = "Form1"
         Text = "Create and Maintain Telephone Directories"
-        CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
+        CType(dgvDisplayListing, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -198,8 +198,8 @@ Partial Class Form1
     Friend WithEvents lblPhoneDirectories As Label
     Friend WithEvents lblCurrentPhoneDirectory As Label
     Friend WithEvents lbCurrentPhoneDirectory As ListBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents btnAddListing As Button
+    Friend WithEvents btnRemoveListing As Button
+    Friend WithEvents btnDisplayListing As Button
+    Friend WithEvents dgvDisplayListing As DataGridView
 End Class
