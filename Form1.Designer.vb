@@ -35,6 +35,8 @@ Partial Class Form1
         Button1 = New Button()
         Button2 = New Button()
         Button3 = New Button()
+        DataGridView1 = New DataGridView()
+        CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' lblClickPointer
@@ -126,36 +128,46 @@ Partial Class Form1
         ' 
         ' Button1
         ' 
-        Button1.Location = New Point(44, 283)
+        Button1.Location = New Point(44, 265)
         Button1.Name = "Button1"
-        Button1.Size = New Size(238, 32)
+        Button1.Size = New Size(238, 45)
         Button1.TabIndex = 10
-        Button1.Text = "Create a New Phone Directory"
+        Button1.Text = "Add a Listing to the Current Directory"
         Button1.UseVisualStyleBackColor = True
         ' 
         ' Button2
         ' 
-        Button2.Location = New Point(288, 283)
+        Button2.Location = New Point(288, 265)
         Button2.Name = "Button2"
-        Button2.Size = New Size(238, 32)
+        Button2.Size = New Size(238, 45)
         Button2.TabIndex = 11
-        Button2.Text = "Create a New Phone Directory"
+        Button2.Text = "Remove a Listing from the Current Directory"
         Button2.UseVisualStyleBackColor = True
         ' 
         ' Button3
         ' 
-        Button3.Location = New Point(532, 283)
+        Button3.Location = New Point(532, 265)
         Button3.Name = "Button3"
-        Button3.Size = New Size(238, 32)
+        Button3.Size = New Size(238, 45)
         Button3.TabIndex = 12
-        Button3.Text = "Create a New Phone Directory"
+        Button3.Text = "Display the Listing in the Current Directory"
         Button3.UseVisualStyleBackColor = True
+        ' 
+        ' DataGridView1
+        ' 
+        DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridView1.Location = New Point(209, 322)
+        DataGridView1.Name = "DataGridView1"
+        DataGridView1.RowTemplate.Height = 25
+        DataGridView1.Size = New Size(401, 108)
+        DataGridView1.TabIndex = 13
         ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(800, 450)
+        Controls.Add(DataGridView1)
         Controls.Add(Button3)
         Controls.Add(Button2)
         Controls.Add(Button1)
@@ -171,6 +183,7 @@ Partial Class Form1
         Controls.Add(lblClickPointer)
         Name = "Form1"
         Text = "Create and Maintain Telephone Directories"
+        CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -188,4 +201,5 @@ Partial Class Form1
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
+    Friend WithEvents DataGridView1 As DataGridView
 End Class
