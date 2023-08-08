@@ -27,7 +27,7 @@ Partial Class Form1
         txtName = New TextBox()
         lblName = New Label()
         lblPhoneNumber = New Label()
-        TextBox1 = New TextBox()
+        txtPhone = New TextBox()
         lbPhoneDirectories = New ListBox()
         lblPhoneDirectories = New Label()
         lblCurrentPhoneDirectory = New Label()
@@ -82,12 +82,12 @@ Partial Class Form1
         lblPhoneNumber.TabIndex = 4
         lblPhoneNumber.Text = "Phone Number:"
         ' 
-        ' TextBox1
+        ' txtPhone
         ' 
-        TextBox1.Location = New Point(471, 218)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(238, 23)
-        TextBox1.TabIndex = 5
+        txtPhone.Location = New Point(471, 218)
+        txtPhone.Name = "txtPhone"
+        txtPhone.Size = New Size(238, 23)
+        txtPhone.TabIndex = 5
         ' 
         ' lbPhoneDirectories
         ' 
@@ -173,7 +173,7 @@ Partial Class Form1
         Controls.Add(lblCurrentPhoneDirectory)
         Controls.Add(lblPhoneDirectories)
         Controls.Add(lbPhoneDirectories)
-        Controls.Add(TextBox1)
+        Controls.Add(txtPhone)
         Controls.Add(lblPhoneNumber)
         Controls.Add(lblName)
         Controls.Add(txtName)
@@ -191,7 +191,7 @@ Partial Class Form1
     Friend WithEvents txtName As TextBox
     Friend WithEvents lblName As Label
     Friend WithEvents lblPhoneNumber As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtPhone As TextBox
     Friend WithEvents lbPhoneDirectories As ListBox
     Friend WithEvents lblPhoneDirectories As Label
     Friend WithEvents lblCurrentPhoneDirectory As Label

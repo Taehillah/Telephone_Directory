@@ -48,4 +48,26 @@ Public Class Form1
 
     End Sub
 
+    Private Sub btnAddListing_Click(sender As Object, e As EventArgs) Handles btnAddListing.Click
+        Dim name As String = txtName.Text
+        Dim phone As String = txtPhone.Text
+        Dim selectedDirectory As String = txtCurrentDirectory.Text
+
+        If name.Trim().Length > 0 And phone.Trim.Length > 0 And selectedDirectory.Trim().Length > 0 Then
+            Dim sells As IO.StreamWriter = IO.File.AppendText(selectedDirectory)
+            sells.WriteLine(name + "," + phone)
+            sells.Close()
+            DisplayData(selectedDirectory)
+        End If
+    End Sub
+
+    Private Sub btnRemoveListing_Click(sender As Object, e As EventArgs) Handles btnRemoveListing.Click
+
+    End Sub
+
+    Private Sub dgvDisplayListing_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvDisplayListing.CellContentClick
+        Dim selectedRow = dgvDisplayListing.CurrentRow.Index
+        txtName.Text = dgvDisplayListing.Item(0, selectedRow).Value.ToString()
+        txtPhone.Text = dgvDisplayListing.Item(1, selectedRow).Value.ToString()
+    End Sub
 End Class
