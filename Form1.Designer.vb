@@ -31,11 +31,11 @@ Partial Class Form1
         lbPhoneDirectories = New ListBox()
         lblPhoneDirectories = New Label()
         lblCurrentPhoneDirectory = New Label()
-        lbCurrentPhoneDirectory = New ListBox()
         btnAddListing = New Button()
         btnRemoveListing = New Button()
         btnDisplayListing = New Button()
         dgvDisplayListing = New DataGridView()
+        txtCurrentDirectory = New TextBox()
         CType(dgvDisplayListing, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -117,15 +117,6 @@ Partial Class Form1
         lblCurrentPhoneDirectory.TabIndex = 8
         lblCurrentPhoneDirectory.Text = "Current Phone Directory:"
         ' 
-        ' lbCurrentPhoneDirectory
-        ' 
-        lbCurrentPhoneDirectory.FormattingEnabled = True
-        lbCurrentPhoneDirectory.ItemHeight = 15
-        lbCurrentPhoneDirectory.Location = New Point(471, 129)
-        lbCurrentPhoneDirectory.Name = "lbCurrentPhoneDirectory"
-        lbCurrentPhoneDirectory.Size = New Size(238, 19)
-        lbCurrentPhoneDirectory.TabIndex = 9
-        ' 
         ' btnAddListing
         ' 
         btnAddListing.Location = New Point(44, 265)
@@ -162,16 +153,23 @@ Partial Class Form1
         dgvDisplayListing.Size = New Size(401, 108)
         dgvDisplayListing.TabIndex = 13
         ' 
+        ' txtCurrentDirectory
+        ' 
+        txtCurrentDirectory.Location = New Point(471, 130)
+        txtCurrentDirectory.Name = "txtCurrentDirectory"
+        txtCurrentDirectory.Size = New Size(238, 23)
+        txtCurrentDirectory.TabIndex = 14
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(800, 450)
+        Controls.Add(txtCurrentDirectory)
         Controls.Add(dgvDisplayListing)
         Controls.Add(btnDisplayListing)
         Controls.Add(btnRemoveListing)
         Controls.Add(btnAddListing)
-        Controls.Add(lbCurrentPhoneDirectory)
         Controls.Add(lblCurrentPhoneDirectory)
         Controls.Add(lblPhoneDirectories)
         Controls.Add(lbPhoneDirectories)
@@ -197,9 +195,9 @@ Partial Class Form1
     Friend WithEvents lbPhoneDirectories As ListBox
     Friend WithEvents lblPhoneDirectories As Label
     Friend WithEvents lblCurrentPhoneDirectory As Label
-    Friend WithEvents lbCurrentPhoneDirectory As ListBox
     Friend WithEvents btnAddListing As Button
     Friend WithEvents btnRemoveListing As Button
     Friend WithEvents btnDisplayListing As Button
     Friend WithEvents dgvDisplayListing As DataGridView
+    Friend WithEvents txtCurrentDirectory As TextBox
 End Class
