@@ -5,7 +5,7 @@ Imports System.ComponentModel
 Imports System.Windows.Forms
 
 Public Class Form1
-    Private Const V As String = "Name"
+
     Dim strDirectories() As String = IO.File.ReadAllLines("Directories.txt")
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -42,8 +42,8 @@ Public Class Form1
                     Order By name
                     Select name, phone
 
-        dgvDisplayListing.DataSource = query
-        dgvDisplayListing.Columns(0).HeaderText = V
+        dgvDisplayListing.DataSource = query.ToList
+        dgvDisplayListing.Columns(0).HeaderText = "Name"
         dgvDisplayListing.Columns(1).HeaderText = "Phone Number"
 
     End Sub

@@ -147,10 +147,10 @@ Partial Class Form1
         ' dgvDisplayListing
         ' 
         dgvDisplayListing.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        dgvDisplayListing.Location = New Point(209, 322)
+        dgvDisplayListing.Location = New Point(266, 316)
         dgvDisplayListing.Name = "dgvDisplayListing"
         dgvDisplayListing.RowTemplate.Height = 25
-        dgvDisplayListing.Size = New Size(401, 108)
+        dgvDisplayListing.Size = New Size(301, 108)
         dgvDisplayListing.TabIndex = 13
         ' 
         ' txtCurrentDirectory
